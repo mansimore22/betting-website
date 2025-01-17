@@ -1,0 +1,2069 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        font-family: "Poppins", serif;
+    }
+
+    body {
+        background-color: #171717;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Edge */
+    }
+
+    #main-container {
+        margin: 0 auto;
+        background-color: #000000;
+        max-width: 800px;
+        position: relative;
+    }
+
+    /* .main-bg {
+        height: 100vh;
+    } */
+
+    /* login */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background-color: #1c1c1c;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 450px;
+    }
+
+    @media (max-width: 480px) {
+        .modal-content {
+            width: 320px;
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 6px;
+        background: #ffffff;
+        border-radius: 50px;
+        display: flex;
+        color: black;
+        color: #fff;
+    }
+
+    .logo img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .modal h2 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .country-code {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    input[type="text"] {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .otp-btn {
+        flex: 1;
+        padding: 10px;
+        background-color: #444;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .otp-btn.whatsapp {
+        background-color: #25d366;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .divider {
+        text-align: center;
+        font-size: 14px;
+        color: #888;
+    }
+
+    .demo-btn {
+        padding: 10px;
+        background-color: #444;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* end */
+    .wallet-section {
+        margin: 0 auto;
+        background-image: url(../images/bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: 800px;
+        background-size: cover;
+    }
+
+    header {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    header .top-bar {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #000000;
+        z-index: 2;
+        position: relative;
+    }
+
+    header .top-bar .menu-icon {
+        padding: 7px;
+        font-size: 23px;
+        border-radius: 50px;
+        display: flex;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    /* Side Menu Styles */
+    .side-menu {
+        position: absolute;
+        top: 0;
+        left: 350px;
+        /* Hidden by default */
+        display: none;
+        height: 100vh;
+        width: 300px;
+        background-color: #121212;
+        color: #fff;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: left 0.3s ease-in-out;
+        /* Smooth slide-in effect */
+        z-index: 9999;
+        padding: 0 20px;
+    }
+
+    .side-menu.open {
+        left: 0;
+        display: block;
+        /* Visible when toggled */
+    }
+
+    .side-menu .rs-image-container img {
+        width: 150px;
+    }
+
+    .rs-image-container {
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rs-image-container .close-icon {
+        background: #ffffff;
+        padding: 5px;
+        border-radius: 50px;
+        display: flex;
+        color: black;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .user-details {
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 10px;
+        align-items: center;
+        background: #313131;
+        border-radius: 10px;
+    }
+
+    .user-icon {
+        font-size: 30px;
+    }
+
+    .side-menu .bonus-section {
+        background-color: #1f1f1f;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .side-menu .bonus-details button {
+        background-color: gray;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: not-allowed;
+    }
+
+    .side-menu .menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .side-menu .menu-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .side-menu .menu-list li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .side-menu .menu-footer {
+        margin: 20px 0;
+        position: absolute;
+        width: inherit;
+        bottom: 10px;
+    }
+
+    .side-menu .social-icons a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .side-menu .logout-button {
+
+        background-color: #800080;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        width: -webkit-fill-available;
+    }
+
+    /* left side menu */
+
+    .actions button {
+        padding: 6px 15px;
+        border-radius: 10px;
+        background-color: white;
+        cursor: pointer;
+        font-size: 15px;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .wallet-section {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+        align-items: center;
+    }
+
+    .wallet-section .wallet-container {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wallet-container .wallet-btn {
+        display: flex;
+        flex-direction: column;
+        padding: 35px 40px;
+        border-radius: 20px;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        background: #000000;
+        color: white;
+        cursor: pointer;
+    }
+
+    .wallet-container .wallet-btn img {
+        width: 30px;
+    }
+
+    .wallet-container .wallet-info {
+        background: black;
+        transform: scale(1.3);
+        padding: 20px;
+        color: white;
+        border-radius: 20px;
+    }
+
+    .wallet-container .wallet-info img {
+        width: 160px;
+    }
+
+    .create-id {
+        padding: 20px 0;
+    }
+
+    .create-id-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .create-id .create-id-btn {
+        background-color: #7E1FAC;
+        padding: 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        font-size: 18px;
+        cursor: pointer;
+        gap: 10px;
+    }
+
+    .create-id .create-id-btn button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        color: white;
+        font-weight: 600;
+        font-size: 17px;
+        cursor: pointer;
+        gap: 10px;
+        background-color: transparent;
+    }
+
+    .game-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        overflow-x: auto;
+    }
+
+    .image-container {
+        flex-shrink: 0;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        /* Ensures images fill the container without distortion */
+        border-radius: 8px;
+        /* Optional: Add rounded corners */
+    }
+
+    .footer {
+        background: #242424;
+        position: sticky;
+        bottom: 0;
+        padding: 10px 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .footer-content a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #dedede;
+    }
+
+    .footer-content a i {
+        font-size: 20px;
+    }
+
+    /*login*/
+
+
+    /* Logo */
+    .rs-logo img {
+        width: 120px;
+    }
+
+    /* Form group */
+    .rs-form-group {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+    }
+
+    .rs-form-group label {
+        flex: 1;
+        font-size: 16px;
+    }
+
+    .rs-form-group label img {
+        width: 25px;
+    }
+
+    .rs-form-group input {
+        flex: 2;
+        padding: 8px 10px;
+        margin-left: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    /* Buttons */
+    .rs-button-group {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .rs-btn {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #6200ea;
+        color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+    .rs-btn:hover {
+        background-color: #3700b3;
+    }
+
+    .rs-whatsapp-btn {
+        background-color: #25d366;
+    }
+
+    .rs-separator {
+        margin: 15px 0;
+        color: #aaa;
+    }
+
+    .rs-demo-id-btn {
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .rs-demo-id-btn:hover {
+        background-color: #444;
+    }
+
+    /* deposite card */
+    .deposit-card {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #2c2c2c;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        z-index: 1000;
+        display: none;
+    }
+
+    .deposit-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .deposit-card-header h3 {
+        margin: 0;
+    }
+
+    .close-button {
+        background: none;
+        color: white;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .deposit-card-body :nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #565656;
+        padding: 10px;
+        border-radius: 12px;
+        color: white;
+    }
+
+    .deposit-card-body input {
+        width: -webkit-fill-available;
+        padding: 10px;
+        border: 1px solid #4a148c;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background: #565656;
+        color: white;
+    }
+
+    .deposit-card-footer .make-payment-btn {
+        width: -webkit-fill-available;
+        background-color: #6200ea;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .deposit-card-footer .make-payment-btn:hover {
+        background-color: #3700b3;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #closeDepositCard i {
+        background: white;
+        padding: 10px;
+        border-radius: 50px;
+        color: black;
+        font-weight: 800;
+        font-size: 17px;
+    }
+
+    .depositAmount {
+        color: white;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    /* deposite */
+    /* Modal Styling */
+    .rs-modal {
+        width: 335px;
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        padding: 20px;
+        color: #fff;
+
+        display: none;
+        position: fixed;
+        /* Set position to absolute */
+        top: 50%;
+        /* Center vertically */
+        left: 50%;
+        /* Center horizontally */
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        /* Offset to center */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Header */
+    .rs-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .rs-modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .rs-close-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Body */
+    .rs-modal-body {
+        padding: 0;
+    }
+
+    .rs-balance-section {
+        background-color: #000;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .rs-balance-section span {
+        display: block;
+        font-size: 0.9rem;
+        color: #ccc;
+    }
+
+    .rs-balance-section p {
+        margin: 5px 0 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    /* Deposit Section */
+    .rs-deposit-section {
+        margin-bottom: 20px;
+    }
+
+    .rs-deposit-section label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+
+    .rs-deposit-section input {
+        width: -webkit-fill-available;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .rs-deposit-note {
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: #ccc;
+    }
+
+    /* Button */
+    .rs-payment-btn {
+        width: -webkit-fill-available;
+        padding: 10px;
+        background-color: #7e00ff;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .rs-payment-btn:hover {
+        background-color: #5b00cc;
+    }
+
+
+    .rs-account-modal {
+        display: none;
+        width: 400px;
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        padding: 20px;
+        color: #fff;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .rs-account-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .rs-account-modal-header h2 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .rs-account-close-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .rs-account-modal-body {
+        padding: 0;
+    }
+
+    .rs-account-form-group {
+        margin-bottom: 15px;
+    }
+
+    .rs-account-form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        color: #ccc;
+    }
+
+    .rs-account-input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .rs-account-submit-btn {
+        width: -webkit-fill-available;
+        padding: 10px;
+        background-color: #7e00ff;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .rs-account-submit-btn:hover {
+        background-color: #5b00cc;
+    }
+
+    .rs-account-submit-btn:disabled {
+        background-color: #555;
+        cursor: not-allowed;
+    }
+
+    /* sdfhsdfsdbhf */
+    .rs-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .rs-tabs {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    .rs-tab {
+        background-color: #333;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        width: -webkit-fill-available;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .rs-tab.active,
+    .rs-tab:hover {
+        background-color: #6200ea;
+    }
+
+    .rs-search-bar {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .rs-search-bar input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        background-color: #222;
+        color: #fff;
+    }
+
+    .rs-search-bar select {
+        padding: 10px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        background-color: #222;
+        color: #fff;
+        max-width: -webkit-fill-available;
+    }
+
+    .rs-cards {
+        display: grid;
+        gap: 20px;
+    }
+
+    .rs-card {
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        padding: 15px;
+        border-radius: 10px;
+        gap: 15px;
+    }
+
+    .rs-logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .rs-info {
+        flex: 1;
+    }
+
+    .rs-info h3 {
+        margin: 0 0 5px;
+        font-size: 18px;
+    }
+
+    .rs-info p {
+        margin: 0;
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    .rs-badge {
+        display: inline-block;
+        margin-top: 5px;
+        background-color: #6200ea;
+        color: #fff;
+        padding: 2px 8px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    .rs-create-btn {
+        background-color: #6200ea;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .rs-create-btn:hover {
+        background-color: #4500b5;
+    }
+
+    @media (max-width: 768px) {
+        .rs-tabs {
+
+            gap: 10px;
+        }
+
+
+    }
+
+    @media (max-width:768px) {
+        .wallet-section .wallet-container {
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+        }
+
+        .side-menu.open {
+            left: 0;
+        }
+    }
+
+    @media (max-width:480px) {
+        .wallet-section .wallet-container {
+            transform: scale(0.7);
+            -webkit-transform: scale(0.7);
+            -moz-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            -o-transform: scale(0.7);
+        }
+
+        .side-menu.open {
+            left: 0;
+        }
+
+        .create-id {
+            padding: 20px 10px;
+        }
+
+        .create-id .create-id-btn button {
+            font-size: 15px;
+        }
+    }
+
+    /* rs-withdrawal-modal
+
+
+    /* Modal Styles */
+    .rs-withdrawal-modal {
+        background-color: #1e1e1e;
+        width: 90%;
+        max-width: 400px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        z-index: 1000;
+        display: none;
+    }
+
+    .rs-withdrawal-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        background-color: #1e1e1e;
+        border-bottom: 1px solid #333;
+    }
+
+    .rs-withdrawal-modal-header h2 {
+        font-size: 18px;
+        margin: 0;
+        color: white;
+    }
+
+    .rs-withdrawal-close-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .rs-withdrawal-modal-body {
+        padding: 16px;
+        background-color: #2a2a2a;
+    }
+
+    .rs-withdrawal-balance-section {
+        text-align: center;
+        margin-bottom: 16px;
+        background: #1e1e1e;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+
+    .rs-withdrawal-balance-section p {
+        font-size: 14px;
+        margin: 0;
+        color: white;
+    }
+
+    .rs-withdrawal-balance-section h3 {
+        font-size: 24px;
+        margin: 8px 0 0;
+        color: white;
+    }
+
+    .rs-withdrawal-info p {
+        font-size: 14px;
+        margin: 8px 0;
+        background: #1e1e1e;
+        color: white;
+        padding: 10px 9px;
+        border-radius: 8px;
+    }
+
+    .rs-withdrawal-input-group {
+        margin: 16px 0;
+    }
+
+    .rs-withdrawal-input-group label {
+        font-size: 14px;
+        display: block;
+        color: white;
+        margin-bottom: 4px;
+    }
+
+    .rs-withdrawal-input-group input {
+        width: -webkit-fill-available;
+        padding: 8px;
+        border: none;
+        border-radius: 8px;
+        background-color: #1e1e1e;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .rs-withdrawal-note {
+        font-size: 12px;
+        color: #ffffff;
+        text-align: start;
+    }
+
+    .rs-withdrawal-modal-footer {
+        padding: 16px;
+        text-align: center;
+        background-color: #2a2a2a;
+        border-top: 1px solid #333;
+    }
+
+    .rs-withdrawal-btn {
+        width: -webkit-fill-available;
+        padding: 8px;
+        background-color: #6a0dad;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .rs-withdrawal-btn:hover {
+        background-color: #580e90;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 480px) {
+        .rs-withdrawal-modal {
+            width: 90%;
+            /* top: 10%; */
+            border-radius: 10px;
+        }
+
+        .rs-withdrawal-modal-header {
+            padding: 12px;
+        }
+
+        .rs-withdrawal-modal-body {
+            padding: 12px;
+        }
+
+        .rs-withdrawal-modal-footer {
+            padding: 12px;
+        }
+
+        .rs-withdrawal-btn {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+
+    /* profile  */
+    .rs-profile-container {
+        width: -webkit-fill-available;
+        background-color: #1a1a1a;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Header */
+    .rs-profile-header {
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        display: none;
+        padding: 16px 0;
+    }
+
+    .rs-profile-profile {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #bdbdbd;
+    }
+
+    /* Menu Items */
+    .rs-profile-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .rs-profile-menu-item {
+        background-color: #222;
+        padding: 12px 16px;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        color: white;
+        gap: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #333;
+        transition: background-color 0.3s;
+    }
+
+    .rs-profile-menu-item span {
+        display: flex;
+        align-items: center;
+    }
+
+    .rs-profile-menu-item:last-child {
+        border-bottom: none;
+    }
+
+    .rs-profile-menu-item:hover {
+        background-color: #444;
+    }
+
+    /* Footer */
+    .rs-profile-footer {
+        width: 100%;
+        background-color: #6e44ff;
+        text-align: center;
+    }
+
+    .rs-profile-button {
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 1rem;
+        padding: 12px 0;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .rs-profile-button:hover {
+        background-color: #5a37d0;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+
+        .rs-profile-header,
+        .rs-profile-menu-item,
+        .rs-profile-button {
+            font-size: 0.9rem;
+        }
+
+        .rs-profile-profile {
+            font-size: 1rem;
+        }
+    }
+
+    /*  */
+    .rs-profile-dashboard {
+        width: -webkit-fill-available;
+        background-color: #333;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .rs-profile-user-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: #444;
+        border-bottom: 1px solid #555;
+    }
+
+    .rs-profile-user-details {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rs-profile-flag {
+        font-size: 18px;
+    }
+
+    .rs-profile-user-name {
+        font-weight: bold;
+        color: #dfdfdf;
+    }
+
+    .rs-profile-phone-number {
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    .rs-profileuser-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rs-profile-change-password {
+        background-color: #222;
+        border: 1px solid #555;
+        border-radius: 5px;
+        padding: 10px 10px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .rs-profile-change-password:hover {
+        background-color: #555;
+    }
+
+    .rs-profile-account-info {
+        padding: 20px;
+        background-color: #444;
+    }
+
+    .rs-profile-balance-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .rs-profile-balance-label {
+        font-size: 18px;
+        font-weight: bold;
+        color: #dfdfdf;
+    }
+
+    .rs-profile-balance-amount {
+        font-size: 24px;
+        font-weight: bold;
+        color: #dfdfdf;
+
+    }
+
+    .rs-profile-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .rs-profile-action-btn {
+        flex: 1;
+        background-color: #222222;
+        border: 1px solid #555;
+        border-radius: 5px;
+        padding: 10px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .rs-profile-action-btn:hover {
+        background-color: #2e2e2e;
+    }
+
+    /* withdrawl page */
+    .rs-withdrawal-bank-details-container {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+        margin-bottom: 315px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .rs-withdrawal-bank-info {
+        background-color: #2d2d2d;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .rs-withdrawal-bank-info span {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    .rs-withdrawal-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .rs-withdrawal-flag-icon {
+        width: 20px;
+        height: 14px;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+
+    .rs-withdrawal-phone-number {
+        font-size: 0.9rem;
+    }
+
+    .rs-withdrawal-add-bank-btn {
+        background-color: #7d3cff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+        width: -webkit-fill-available;
+    }
+
+    .rs-withdrawal-add-bank-btn:hover {
+        background-color: #5d2bcc;
+    }
+
+    .rs-withdrawal-note {
+        font-size: 0.8rem;
+        margin-top: 10px;
+        color: #aaa;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .rs-withdrawal-bank-details-container {
+            padding: 15px;
+        }
+
+        .rs-withdrawal-add-bank-btn {
+            font-size: 0.9rem;
+        }
+
+        .rs-withdrawal-note {
+            font-size: 0.75rem;
+        }
+    }
+
+    /* help popup */
+
+    /* Help Popup */
+    .rs-help-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1e1e1e;
+        color: #fff;
+        width: 100%;
+        max-width: 330px;
+        border-radius: 10px;
+        display: none;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Header */
+    .rs-help-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #444;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .rs-help-header h2 {
+        font-size: 18px;
+    }
+
+    .rs-close-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+    }
+
+    /* Help Message */
+    .rs-help-message {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    /* WhatsApp Button */
+    .rs-whatsapp-btn {
+        background-color: #6a1b9a;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: -webkit-fill-available;
+        transition: background-color 0.3s ease;
+    }
+
+    .rs-whatsapp-btn i {
+        font-size: 20px;
+    }
+
+    .rs-whatsapp-btn:hover {
+        background-color: #5e1388;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .rs-help-popup {
+            padding: 15px;
+        }
+
+        .rs-help-header h2 {
+            font-size: 16px;
+        }
+
+        .rs-help-message {
+            font-size: 13px;
+        }
+
+        .rs-whatsapp-btn {
+            font-size: 14px;
+            padding: 8px 15px;
+        }
+    }
+
+    /* alert message */
+    .rs-alert-popup {
+        width: 90%;
+        max-width: 500px;
+        background-color: #1b1b1b;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding: 16px;
+        position: fixed;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 10000;
+    }
+
+    .rs-alert-header {
+        display: flex;
+        align-items: center;
+        background: #2d2d2d;
+        padding: 10px 10px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    .rs-alert-header img {
+        width: 25px;
+    }
+
+    .rs-alert-icon {
+        font-size: 24px;
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .rs-alert-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .rs-alert-body {
+        margin-bottom: 16px;
+        font-size: 16px;
+        text-align: start;
+    }
+
+    .rs-alert-footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rs-alert-button {
+        padding: 8px 16px;
+        background-color: #6a1b9a;
+        /* Purple */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        width: -webkit-fill-available;
+        transition: background-color 0.3s ease;
+    }
+
+    .rs-alert-button:hover {
+        background-color: #8e24aa;
+        /* Lighter purple */
+    }
+
+    @media (max-width: 480px) {
+        .rs-alert-popup {
+            font-size: 14px;
+            width: 80%;
+        }
+
+        .rs-alert-button {
+            font-size: 14px;
+            padding: 6px 12px;
+        }
+    }
+
+    /* passbook  */
+    .rs-passbook-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Tab Navigation */
+    .rs-passbook-tab-nav {
+        display: flex;
+        border-bottom: 2px solid #333;
+    }
+
+    .rs-passbook-tab {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #222222;
+        color: #fff;
+        border-radius: 10px;
+    }
+
+    .rs-passbook-tab.rs-active {
+        border-bottom: 2px solid #800080;
+    }
+
+    /* Content Section */
+    .rs-passbook-content {
+        padding: 20px 20px;
+        background-color: #222;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 10px;
+        height: 100vh;
+    }
+
+    .rs-passbook-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .rs-passbook-header span {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .rs-passbook-filter-dropdown {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .rs-passbook-message {
+        font-size: 16px;
+        color: #aaa;
+        margin-top: 20%;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .rs-passbook-tab {
+            font-size: 14px;
+            padding: 8px;
+        }
+
+        .rs-passbook-header {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .rs-passbook-filter-dropdown {
+            width: 100%;
+        }
+
+        .rs-passbook-message {
+            font-size: 14px;
+        }
+    }
+
+    /* alternate number */
+    /* Base styling */
+    .rs-alternatenumber {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 999;
+    }
+
+    /* Modal Styles */
+    .rs-alternatenumber-modal {
+        width: 90%;
+        max-width: 400px;
+        background: #333;
+        border-radius: 8px;
+        overflow: hidden;
+        color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Header Styles */
+    .rs-alternatenumber-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #111;
+        padding: 10px 15px;
+    }
+
+    .rs-alternatenumber-modal-header h2 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .rs-alternatenumber-close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* Modal Body Styles */
+    .rs-alternatenumber-modal-body {
+        padding: 20px;
+    }
+
+    .rs-alternatenumber-modal-body label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    /* Input Container */
+    .rs-alternatenumber-input-container {
+        display: flex;
+        align-items: center;
+        background: #000;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        gap: 8px;
+    }
+
+    /* Dropdown Styles */
+    .rs-alternatenumber-country-select {
+        background: #000;
+        border: none;
+        color: white;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        appearance: none;
+        cursor: pointer;
+    }
+
+    .rs-alternatenumber-country-select:focus {
+        outline: none;
+        box-shadow: 0 0 5px #800080;
+    }
+
+    /* Mobile Number Input */
+    #mobile-number {
+        flex-grow: 1;
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Verify Button */
+    .rs-alternatenumber-verify-btn {
+        width: -webkit-fill-available;
+        padding: 10px 15px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background: #800080;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .rs-alternatenumber-verify-btn:hover {
+        background: #9b30ff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .rs-alternatenumber-modal {
+            width: 95%;
+        }
+
+        .rs-alternatenumber-modal-header h2 {
+            font-size: 16px;
+        }
+
+        .rs-alternatenumber-verify-btn {
+            font-size: 14px;
+        }
+
+        .rs-alternatenumber-country-select {
+            font-size: 12px;
+        }
+    }
+
+    /* verify mail */
+    /* Modal Overlay */
+    .vmmail-modal-overlay {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        display: none;
+        z-index: 9999;
+    }
+
+    /* Modal Box */
+    .vmmail-modal {
+        background-color: #2c2c2c;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 350px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        position: relative;
+        /* Ensure proper alignment */
+    }
+
+    /* Modal Header */
+    .vmmail-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+
+    .vmmail-modal-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .vmmail-close-button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Modal Content */
+    .vmmail-modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vmmail-modal-content label {
+        color: #ccc;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .vmmail-modal-content input {
+        background-color: #1a1a1a;
+        border: none;
+        color: #fff;
+        padding: 0.6rem;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .vmmail-modal-content input::placeholder {
+        color: #555;
+    }
+
+    .vmmail-verify-button {
+        background-color: #555;
+        color: #ccc;
+        border: none;
+        padding: 0.6rem;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        cursor: not-allowed;
+        transition: background-color 0.3s ease;
+    }
+
+    .vmmail-verify-button:enabled {
+        background-color: #4726b5;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+        .vmmail-modal {
+            padding: 1rem;
+        }
+
+        .vmmail-modal-header h2 {
+            font-size: 1rem;
+        }
+
+        .vmmail-modal-content input,
+        .vmmail-verify-button {
+            padding: 0.6rem;
+            font-size: 0.8rem;
+        }
+    }
+
+
+    /* deposit-details */
+    .rs-deposit-details-container {
+        background: #565656;
+        max-width: 673px;
+        width: 100%;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        z-index: 9999;
+    }
+
+    .rs-deposit-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .rs-deposit-close-btn {
+        padding: 0px 10px;
+        border-radius: 50px;
+        font-size: 26px;
+        cursor: pointer;
+        background: black;
+        color: white;
+        border: none;
+    }
+
+    .rs-deposit-bank-details {
+        background: black;
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .bank-logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 20px;
+        border-bottom: 2px solid #474545;
+    }
+
+    .bank-logo-container i {
+        color: #6a6a6a;
+        background: #1b1b1b;
+        font-size: 30px;
+        padding: 7px;
+        border-radius: 20px;
+    }
+
+    .bank-title-container {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        padding: 20px;
+        background: #141414;
+        margin: 15px;
+        border-top-left-radius: 25px;
+        list-style: none;
+        border-top-right-radius: 25px;
+    }
+
+    .bank-title-left li {
+        font-size: 17px;
+        padding-bottom: 8px;
+    }
+
+    .bank-title-right li {
+        text-align: end;
+        font-size: 17px;
+        padding-bottom: 8px;
+    }
+
+    .rs-deposit-bottom {
+        padding: 20px;
+    }
+
+    .file-upload-container {
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        /* Dark background */
+        color: #fff;
+        /* White text */
+        border: 1px solid #555;
+        /* Border color */
+        border-radius: 12px;
+        /* Rounded corners */
+        padding: 10px 20px;
+        /* Spacing */
+        cursor: pointer;
+        width: 100%;
+        /* Full width */
+        max-width: 500px;
+        cursor: pointer;
+        /* Optional max-width */
+        margin: auto;
+        font-family: Arial, sans-serif;
+        /* Font styling */
+    }
+
+    .file-upload-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        /* Space between icon and text */
+        font-size: 16px;
+        cursor: pointer;
+        /* Font size */
+    }
+
+    .plus-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        /* White icon background */
+        color: #333;
+        /* Icon color */
+        font-size: 18px;
+        /* Plus sign size */
+        font-weight: bold;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 50%;
+        /* Circle shape */
+    }
+
+    .file-upload-input {
+        display: none;
+        /* Hide the actual file input */
+    }
